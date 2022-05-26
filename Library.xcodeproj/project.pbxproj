@@ -13,6 +13,7 @@
 		8A248C4B283D500100641A82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A248C4A283D500100641A82 /* Preview Assets.xcassets */; };
 		8A248C59283D510400641A82 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A248C58283D510400641A82 /* Data.json */; };
 		8A248C65283D516E00641A82 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A248C64283D516E00641A82 /* Books.swift */; };
+		8A36614828401D0000CC5557 /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36614728401D0000CC5557 /* BooksModel.swift */; };
 		8A60802F2840196B00F230F5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60802E2840196B00F230F5 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		8A248C4A283D500100641A82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A248C58283D510400641A82 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		8A248C64283D516E00641A82 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		8A36614728401D0000CC5557 /* BooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 		8A60802E2840196B00F230F5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 		8A248C56283D50D200641A82 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				8A36614728401D0000CC5557 /* BooksModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				8A248C46283D4FFF00641A82 /* ContentView.swift in Sources */,
 				8A248C44283D4FFF00641A82 /* LibraryApp.swift in Sources */,
 				8A60802F2840196B00F230F5 /* DataService.swift in Sources */,
+				8A36614828401D0000CC5557 /* BooksModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
