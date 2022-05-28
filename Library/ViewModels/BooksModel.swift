@@ -19,6 +19,12 @@ class BooksModel: ObservableObject {
             book[index].rating = rating
         }
     }
+    
+    func SaveForLater(ID: Int){
+        if let index = book.firstIndex(where: { $0.id == ID }) {
+            book[index].isFavourite.toggle()
+        }
+    }
 }
 
 

@@ -26,8 +26,23 @@ struct BookDetail: View {
                     }
                 })
 
+            
+            
             Text("Save for later")
-            Image(systemName: "star.fill")
+            
+            Button{
+                model.SaveForLater(ID: books.id)
+            } label: {
+                if books.isFavourite{
+                Image(systemName: "star.fill")
+                } else
+                {
+                    Image(systemName: "star")
+                }
+            }
+            
+            
+            
             Text("Rate \(books.title)")
             Picker("", selection: $rating){
                 ForEach(1..<6){ r in
