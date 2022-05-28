@@ -14,7 +14,6 @@ struct BookDetail: View {
     
     var body: some View {
         VStack{
-            Text(books.title)
                 NavigationLink(destination: Reader(),
                                label: {
                     VStack{
@@ -30,7 +29,18 @@ struct BookDetail: View {
             Text("Save for later")
             Image(systemName: "star.fill")
             Text("Rate \(books.title)")
+            Picker("", selection: $rating){
+                ForEach(1..<6){ r in
+                    Text("\(r)").tag(r)
+                }
+            }
+            .pickerStyle(.segmented)
+            .onChange(of: rating, perform: { newValue in
+                model.ChangeRating(ID: books.id, rating: rating)
+            })
         }
+        .navigationTitle(books.title)
+        .onAppear{ rating = books.rating }
     }
 }
 
