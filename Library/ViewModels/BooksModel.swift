@@ -20,6 +20,12 @@ class BooksModel: ObservableObject {
         }
     }
     
+    func CurrentPage(ID: Int, Page: Int){
+        if let index = book.firstIndex(where: { $0.id == ID}){
+            book[index].currentPage = Page
+        }
+    }
+    
     func SaveForLater(ID: Int){
         if let index = book.firstIndex(where: { $0.id == ID }) {
             book[index].isFavourite.toggle()
