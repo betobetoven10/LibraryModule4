@@ -21,6 +21,7 @@ struct ContentView: View {
                             BookCover(books: r)
                         })
                     }
+                    .padding()
                 }
                 .padding()
             }

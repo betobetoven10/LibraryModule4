@@ -18,32 +18,37 @@ struct BookDetail: View {
                                label: {
                     VStack{
                         Text("Read Now")
+                            .font(.title)
                             let beto = String(books.id)
                                 Image("cover" + beto)
                                     .resizable()
-                                    .clipped()
-                                    .aspectRatio(contentMode: .fit)
+                                    .scaledToFit()
                     }
                 })
 
             
-            
+            Spacer()
             Text("Save for later")
+                .font(.title2)
             
             Button{
                 model.SaveForLater(ID: books.id)
             } label: {
                 if books.isFavourite{
                 Image(systemName: "star.fill")
+                        .resizable()
+                        .frame(width: 40, height: 40)
                 } else
                 {
                     Image(systemName: "star")
+                        .resizable()
+                        .frame(width: 40, height: 40)
                 }
             }
-            
-            
-            
+            .accentColor(.yellow)
+            Spacer()
             Text("Rate \(books.title)")
+                .font(.title2)
             Picker("", selection: $rating){
                 ForEach(1..<6){ r in
                     Text("\(r)").tag(r)
@@ -53,9 +58,12 @@ struct BookDetail: View {
             .onChange(of: rating, perform: { newValue in
                 model.ChangeRating(ID: books.id, rating: rating)
             })
+            .padding()
         }
         .navigationTitle(books.title)
         .onAppear{ rating = books.rating }
+        .padding()
+        Spacer()
     }
 }
 

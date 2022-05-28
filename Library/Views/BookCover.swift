@@ -14,16 +14,24 @@ struct BookCover: View {
     var body: some View {
         ZStack{
             Rectangle()
-                .foregroundColor(.white)
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
+                .shadow(color: .gray, radius: 5, x: -5, y: 5)
             VStack{
                 HStack{
-                    VStack{
+                    VStack (alignment: .leading) {
                         Text(books.title)
+                            .bold()
+                            .font(.title)
                         Text(books.author)
                     }
                     Spacer()
                     if books.isFavourite {
-                    Image(systemName: "star")
+                    Image(systemName: "star.fill")
+                            .resizable()
+                            .accentColor(.yellow)
+                            .frame(width: 40, height: 40)
+                        
                     }
                 }
                 Image("cover\(books.id)")
@@ -31,7 +39,10 @@ struct BookCover: View {
                     .clipped()
                     .aspectRatio(contentMode: .fit)
             }
+            .padding()
         }
+        .accentColor(.black)
+
     }
 }
 
