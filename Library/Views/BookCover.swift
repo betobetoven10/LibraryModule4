@@ -22,7 +22,9 @@ struct BookCover: View {
                         Text(books.author)
                     }
                     Spacer()
-                    Image(systemName: "star.fill")
+                    if books.isFavourite {
+                    Image(systemName: "star")
+                    }
                 }
                 Image("cover\(books.id)")
                     .resizable()
