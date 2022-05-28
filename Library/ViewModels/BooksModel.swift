@@ -7,11 +7,20 @@
 
 import Foundation
 
-class BooksModel: ObservableObject{
+class BooksModel: ObservableObject {
     @Published var book = [Books]()
+    
     init (){
         self.book = DataService.getLocalData()
     }
+    
+    func ChangeRating(ID: Int, rating: Int) {
+        if let index = book.firstIndex(where: { $0.id == ID }) {
+            book[index].rating = rating
+        }
+    }
 }
+
+
 
 //This View Model fetch the data by calling the function getLocalData from the DataService class. It is initialized by the init the method, which runs the code as soon as the class is called. 

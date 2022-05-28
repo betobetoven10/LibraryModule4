@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @EnvironmentObject var model:BooksModel
     
     var body: some View {
@@ -15,27 +16,9 @@ struct ContentView: View {
             ScrollView{
                 LazyVStack{
                     ForEach(model.book){ r in
-                        let beto = String(r.id)
-                        NavigationLink(destination: BookDetail(),
+                        NavigationLink(destination: BookDetail(books: r),
                                        label: {
-                            ZStack{
-                                Rectangle()
-                                    .foregroundColor(.white)
-                                VStack{
-                                    HStack{
-                                        VStack{
-                                            Text(r.title)
-                                            Text(r.author)
-                                        }
-                                        Spacer()
-                                        Image(systemName: "star.fill")
-                                    }
-                                    Image("cover" + beto)
-                                        .resizable()
-                                        .clipped()
-                                        .aspectRatio(contentMode: .fit)
-                                }
-                            }
+                            BookCover(books: r)
                         })
                     }
                 }

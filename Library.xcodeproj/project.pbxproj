@@ -16,6 +16,7 @@
 		8A36614828401D0000CC5557 /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36614728401D0000CC5557 /* BooksModel.swift */; };
 		8A36614E28401EB900CC5557 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36614D28401EB900CC5557 /* BookDetail.swift */; };
 		8A36615028401EC900CC5557 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36614F28401EC800CC5557 /* Reader.swift */; };
+		8A4A756B2842731500999DD2 /* BookCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A756A2842731500999DD2 /* BookCover.swift */; };
 		8A60802F2840196B00F230F5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60802E2840196B00F230F5 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		8A36614728401D0000CC5557 /* BooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 		8A36614D28401EB900CC5557 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		8A36614F28401EC800CC5557 /* Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		8A4A756A2842731500999DD2 /* BookCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCover.swift; sourceTree = "<group>"; };
 		8A60802E2840196B00F230F5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 				8A248C45283D4FFF00641A82 /* ContentView.swift */,
 				8A36614D28401EB900CC5557 /* BookDetail.swift */,
 				8A36614F28401EC800CC5557 /* Reader.swift */,
+				8A4A756A2842731500999DD2 /* BookCover.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				8A248C65283D516E00641A82 /* Books.swift in Sources */,
 				8A248C46283D4FFF00641A82 /* ContentView.swift in Sources */,
 				8A248C44283D4FFF00641A82 /* LibraryApp.swift in Sources */,
+				8A4A756B2842731500999DD2 /* BookCover.swift in Sources */,
 				8A60802F2840196B00F230F5 /* DataService.swift in Sources */,
 				8A36614828401D0000CC5557 /* BooksModel.swift in Sources */,
 				8A36614E28401EB900CC5557 /* BookDetail.swift in Sources */,

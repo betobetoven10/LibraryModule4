@@ -7,7 +7,7 @@
 
 import Foundation
 class DataService {
-    static func getLocalData() -> [Books]{
+    static func getLocalData() -> [Books]{ //We declare this as a static function in order to be able to call it without creating an instance of DataService
         let pathString = Bundle.main.path(forResource: "Data", ofType: "json")
         guard pathString != nil else {
             return [Books]()
